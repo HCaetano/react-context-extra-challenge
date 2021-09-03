@@ -1,6 +1,6 @@
 import React from "react";
 import Supervisor from "../Supervisor/Supervisor";
 
-export default function SupervistorList() {
+export default function SupervisorList() {
 	return <div>list</div>;
 }
