@@ -1,0 +1,62 @@
+.body {
+	background-color: #f7f7f7;
+}
+
+.button {
+	background-color: #ffffff;
+	border: 1px solid #1c1c21;
+	border-radius: 4px;
+	color: #000000;
+	margin: 24px auto 0;
+	padding: 8px 16px;
+	text-transform: uppercase;
+}
+
+.card {
+	background-color: #ffffff;
+	display: flex;
+	flex-flow: column;
+	height: 405px;
+	margin: 147px auto 0;
+	padding: 24px;
+	width: 278px;
+}
+
+.card-text {
+	font-family: "Barlow", sans-serif;
+	font-size: 14px;
+	line-height: 16.8px;
+	margin: 0;
+}
+
+.content-wrapper {
+	margin: 16px 0 0;
+}
+
+.label {
+	color: #979797;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.name {
+	font-family: "Barlow", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28.8px;
+	margin: 16px auto 0;
+}
+
+.picture {
+	border: 3px solid #00c850;
+	border-radius: 50%;
+	height: 149px;
+	margin: 0 auto;
+	width: 145px;
+}
+
+.user-information {
+	color: #000000;
+	font-weight: 700;
+	margin: 5px 0 0;
+}
