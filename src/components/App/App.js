@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+import Navbar from "../Navbar/Navbar";
 
 export default class App extends Component {
 	render() {
-		return <>{this.props.children}</>;
+		return (
+			<main>
+				<Navbar />
+				{this.props.children}
+			</main>
+		);
 	}
 }

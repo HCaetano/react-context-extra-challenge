@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 
 export default function Supervisor() {
 	return (
-		<main className={styles.body}>
+		<section className={styles.container}>
 			<article className={styles.card}>
 				<img
 					className={styles.picture}
@@ -37,9 +37,8 @@ export default function Supervisor() {
 						{"0456 456 456"}
 					</p>
 				</div>
-
 				<button className={styles.button}>Back to the list</button>
 			</article>
-		</main>
+		</section>
 	);
 }

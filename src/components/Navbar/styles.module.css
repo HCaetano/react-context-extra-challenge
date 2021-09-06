@@ -1,0 +1,9 @@
+.container {
+	background-color: #f7f7f7;
+	display: flex;
+	padding: 40px 0;
+}
+
+.picture {
+	margin: 0 auto;
+}
