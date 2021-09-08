@@ -10,7 +10,7 @@ export default function Supervisor() {
 				<img
 					className={styles.picture}
 					src={userPicture}
-					alt="User's profile picture"
+					alt="User's profile"
 				/>
 				<h1 className={styles.name}>{"Sergio Martin"}</h1>
 				<div className={styles["content-wrapper"]}>
