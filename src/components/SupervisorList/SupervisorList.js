@@ -1,11 +1,22 @@
 import React from "react";
+import { navigate } from "@reach/router";
 import classNames from "classnames";
-import supervisors from "./data.js";
+import supervisors from "../data.js";
 import styles from "./styles.module.css";
 import plusSign from "../../assets/Plus.png";
 import { Component } from "react";
 
 export default class SupervisorList extends Component {
+	constructor(props) {
+		super(props);
+
+		this.handleView = this.handleView.bind(this);
+	}
+
+	handleView(id) {
+		navigate(`/${id}`);
+	}
+
 	render() {
 		return (
 			<section className={styles.container}>
@@ -79,8 +90,16 @@ export default class SupervisorList extends Component {
 							></p>
 						</div>
 						{supervisors.map(
-							({ firstName, lastName, state, postcode, employer, phone }) => (
-								<div className={styles["table-row"]}>
+							({
+								id,
+								firstName,
+								lastName,
+								state,
+								postcode,
+								employer,
+								phone,
+							}) => (
+								<div className={styles["table-row"]} key={id}>
 									<p
 										className={classNames(
 											styles["column-first-name"],
@@ -135,7 +154,10 @@ export default class SupervisorList extends Component {
 											styles["column-content-text"]
 										)}
 									>
-										<button className={styles["view-button"]}>
+										<button
+											className={styles["view-button"]}
+											onClick={() => this.handleView(id)}
+										>
 											View profile
 										</button>
 									</p>

@@ -1,5 +1,6 @@
 const supervisors = [
 	{
+		id: 1,
 		firstName: "Alfred",
 		lastName: "Merrickville",
 		state: "NSW",
@@ -8,6 +9,7 @@ const supervisors = [
 		phone: "0423234432",
 	},
 	{
+		id: 2,
 		firstName: "Jenny",
 		lastName: "Rae",
 		state: "ACT",
@@ -16,6 +18,7 @@ const supervisors = [
 		phone: "0433674367",
 	},
 	{
+		id: 3,
 		firstName: "Gregory",
 		lastName: "Munch",
 		state: "NSW",
@@ -24,6 +27,7 @@ const supervisors = [
 		phone: "0499747754",
 	},
 	{
+		id: 4,
 		firstName: "Daniel",
 		lastName: "Palmer",
 		state: "QLD",
@@ -32,6 +36,7 @@ const supervisors = [
 		phone: "0423458875",
 	},
 	{
+		id: 5,
 		firstName: "Nathan",
 		lastName: "Thomson",
 		state: "NSW",
@@ -40,6 +45,7 @@ const supervisors = [
 		phone: "0423434532",
 	},
 	{
+		id: 6,
 		firstName: "Lily",
 		lastName: "Aldrich",
 		state: "QLD",
