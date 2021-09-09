@@ -7,6 +7,7 @@ const supervisors = [
 		postcode: "2000",
 		employer: "N/A",
 		phone: "0423234432",
+		email: "alfred@company.com",
 	},
 	{
 		id: 2,
@@ -16,6 +17,7 @@ const supervisors = [
 		postcode: "3450",
 		employer: "Canberra Fitness",
 		phone: "0433674367",
+		email: "jenny@company.com",
 	},
 	{
 		id: 3,
@@ -25,6 +27,7 @@ const supervisors = [
 		postcode: "2037",
 		employer: "Darghan Crossfit",
 		phone: "0499747754",
+		email: "greg@company.com",
 	},
 	{
 		id: 4,
@@ -34,6 +37,7 @@ const supervisors = [
 		postcode: "1234",
 		employer: "N/A ",
 		phone: "0423458875",
+		email: "daniel@company.com",
 	},
 	{
 		id: 5,
@@ -43,6 +47,7 @@ const supervisors = [
 		postcode: "2900",
 		employer: "N/A ",
 		phone: "0423434532",
+		email: "nathan@company.com",
 	},
 	{
 		id: 6,
@@ -52,6 +57,7 @@ const supervisors = [
 		postcode: "6489",
 		employer: "Sunshine Gym",
 		phone: "0456364564",
+		email: "lily@company.com",
 	},
 ];
 
