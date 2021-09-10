@@ -5,6 +5,7 @@ import App from "./components/App/App";
 import Supervisor from "./components/SupervisorProfile/SupervisorProfile";
 import SupervisorList from "./components/SupervisorList/SupervisorList";
 import reportWebVitals from "./reportWebVitals";
+import "./css-reset.css";
 
 ReactDOM.render(
 	<React.StrictMode>
