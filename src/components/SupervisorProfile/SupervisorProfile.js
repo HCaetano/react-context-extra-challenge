@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { navigate } from "@reach/router";
 import classNames from "classnames";
-import supervisors from "../data.js";
+import { AppContext } from "../../context/AppProvider";
+// import supervisors from "../data.js";
 import userPicture from "../../assets/Avatar.png";
 import styles from "./styles.module.css";
 
 export default class Supervisor extends Component {
+	static contextType = AppContext;
+
 	constructor(props) {
 		super(props);
 
@@ -20,6 +23,7 @@ export default class Supervisor extends Component {
 	}
 
 	componentDidMount() {
+		const { supervisors } = this.context;
 		const idFromUrl = Number(this.props.supervisorId);
 		const fetchedSupervisor = supervisors.find(
 			(supervisor) => supervisor.id === idFromUrl

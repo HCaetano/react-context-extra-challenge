@@ -11,6 +11,7 @@ export default class SupervisorModal extends Component {
 		super(props);
 
 		this.state = {
+			id: "",
 			firstName: "",
 			lastName: "",
 			state: "",
@@ -32,7 +33,11 @@ export default class SupervisorModal extends Component {
 	}
 
 	handleSubmit() {
-		this.context.setSupervisor(this.state);
+		const supervisorId = parseInt(Math.random() * 1000000, 10);
+		this.setState(
+			(previousState) => ({ ...previousState, id: supervisorId }),
+			() => this.context.setSupervisor(this.state)
+		);
 		this.props.handleCloseModal();
 	}
 
