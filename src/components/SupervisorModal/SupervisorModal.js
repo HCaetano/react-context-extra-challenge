@@ -10,7 +10,15 @@ export default class SupervisorModal extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			firstName: "",
+			lastName: "",
+			state: "",
+			postcode: "",
+			employer: "",
+			phone: "",
+			email: "",
+		};
 
 		this.handleInputChange = this.handleInputChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,22 +32,14 @@ export default class SupervisorModal extends Component {
 	}
 
 	handleSubmit() {
+		this.context.setSupervisor(this.state);
 		this.props.handleCloseModal();
 	}
 
 	render() {
 		const { isOpen, handleCloseModal } = this.props;
-		const {
-			supervisor: {
-				firstName,
-				lastName,
-				state,
-				postcode,
-				employer,
-				phone,
-				email,
-			},
-		} = this.context;
+		const { firstName, lastName, state, postcode, employer, phone, email } =
+			this.state;
 
 		return (
 			<Modal
