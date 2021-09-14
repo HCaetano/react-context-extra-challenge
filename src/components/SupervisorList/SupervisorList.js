@@ -1,16 +1,32 @@
-import React from "react";
+import React, { Component } from "react";
 import { navigate } from "@reach/router";
 import classNames from "classnames";
-import supervisors from "../data.js";
+import { AppContext } from "../../context/AppProvider";
+import SupervisorModal from "../SupervisorModal/SupervisorModal";
 import styles from "./styles.module.css";
+import supervisors from "../data.js";
 import plusSign from "../../assets/Plus.png";
-import { Component } from "react";
 
 export default class SupervisorList extends Component {
-	constructor(props) {
-		super(props);
+	static contextType = AppContext;
 
+	constructor() {
+		super();
+		this.state = {
+			isOpen: false,
+		};
+
+		this.handleCloseModal = this.handleCloseModal.bind(this);
+		this.handleOpenModal = this.handleOpenModal.bind(this);
 		this.handleView = this.handleView.bind(this);
+	}
+
+	handleCloseModal() {
+		this.setState({ isOpen: false });
+	}
+
+	handleOpenModal() {
+		this.setState({ isOpen: true });
 	}
 
 	handleView(id) {
@@ -18,18 +34,27 @@ export default class SupervisorList extends Component {
 	}
 
 	render() {
+		const { isOpen } = this.state;
+
 		return (
 			<section className={styles.container}>
+				<SupervisorModal
+					isOpen={isOpen}
+					handleCloseModal={this.handleCloseModal}
+				/>
 				<section className={styles["content"]}>
 					<div className={styles["content-header"]}>
 						<h1 className={styles.title}>List of Supervisors</h1>
-						<button className={styles["add-button"]}>
+						<button
+							className={styles["add-button"]}
+							onClick={this.handleOpenModal}
+						>
 							<img
 								className={styles["plus-sign"]}
 								src={plusSign}
 								alt="Plus sign"
 							/>
-							<p className={styles["add-button-text"]}>ADD supervisor</p>
+							<p className={styles["add-button-text"]}>Add supervisor</p>
 						</button>
 					</div>
 					<section className={styles["table"]}>
