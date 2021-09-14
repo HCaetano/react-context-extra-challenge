@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { AppContext } from "../../context/AppProvider";
 import SupervisorModal from "../SupervisorModal/SupervisorModal";
 import styles from "./styles.module.css";
-import supervisors from "../data.js";
+// import supervisors from "../data.js";
 import plusSign from "../../assets/Plus.png";
 
 export default class SupervisorList extends Component {
@@ -35,6 +35,7 @@ export default class SupervisorList extends Component {
 
 	render() {
 		const { isOpen } = this.state;
+		const { supervisors } = this.context;
 
 		return (
 			<section className={styles.container}>
@@ -114,81 +115,82 @@ export default class SupervisorList extends Component {
 								)}
 							></p>
 						</div>
-						{supervisors.map(
-							({
-								id,
-								firstName,
-								lastName,
-								state,
-								postcode,
-								employer,
-								phone,
-							}) => (
-								<div className={styles["table-row"]} key={id}>
-									<p
-										className={classNames(
-											styles["column-first-name"],
-											styles["column-content-text"]
-										)}
-									>
-										{firstName}
-									</p>
-									<p
-										className={classNames(
-											styles["column-last-name"],
-											styles["column-content-text"]
-										)}
-									>
-										{lastName}
-									</p>
-									<p
-										className={classNames(
-											styles["column-state"],
-											styles["column-content-text"]
-										)}
-									>
-										{state}
-									</p>
-									<p
-										className={classNames(
-											styles["column-postcode"],
-											styles["column-content-text"]
-										)}
-									>
-										{postcode}
-									</p>
-									<p
-										className={classNames(
-											styles["column-employer"],
-											styles["column-content-text"]
-										)}
-									>
-										{employer}
-									</p>
-									<p
-										className={classNames(
-											styles["column-phone"],
-											styles["column-content-text"]
-										)}
-									>
-										{phone}
-									</p>
-									<p
-										className={classNames(
-											styles["column-button"],
-											styles["column-content-text"]
-										)}
-									>
-										<button
-											className={styles["view-button"]}
-											onClick={() => this.handleView(id)}
+						{supervisors.length > 0 &&
+							supervisors.map(
+								({
+									id,
+									firstName,
+									lastName,
+									state,
+									postcode,
+									employer,
+									phone,
+								}) => (
+									<div className={styles["table-row"]} key={id}>
+										<p
+											className={classNames(
+												styles["column-first-name"],
+												styles["column-content-text"]
+											)}
 										>
-											View profile
-										</button>
-									</p>
-								</div>
-							)
-						)}
+											{firstName}
+										</p>
+										<p
+											className={classNames(
+												styles["column-last-name"],
+												styles["column-content-text"]
+											)}
+										>
+											{lastName}
+										</p>
+										<p
+											className={classNames(
+												styles["column-state"],
+												styles["column-content-text"]
+											)}
+										>
+											{state}
+										</p>
+										<p
+											className={classNames(
+												styles["column-postcode"],
+												styles["column-content-text"]
+											)}
+										>
+											{postcode}
+										</p>
+										<p
+											className={classNames(
+												styles["column-employer"],
+												styles["column-content-text"]
+											)}
+										>
+											{employer}
+										</p>
+										<p
+											className={classNames(
+												styles["column-phone"],
+												styles["column-content-text"]
+											)}
+										>
+											{phone}
+										</p>
+										<p
+											className={classNames(
+												styles["column-button"],
+												styles["column-content-text"]
+											)}
+										>
+											<button
+												className={styles["view-button"]}
+												onClick={() => this.handleView(id)}
+											>
+												View profile
+											</button>
+										</p>
+									</div>
+								)
+							)}
 					</section>
 				</section>
 			</section>
