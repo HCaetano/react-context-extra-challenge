@@ -7,22 +7,16 @@ class AppProvider extends Component {
 		super(props);
 
 		this.state = {
-			supervisor: {
-				firstName: "John",
-				lastName: "Dahl",
-				state: "state",
-				postcode: "post",
-				employer: "Superfit",
-				phone: "9232",
-				email: "email@email.com",
-			},
+			supervisors: [],
 		};
 
 		this.setSupervisor = this.setSupervisor.bind(this);
 	}
 
 	setSupervisor(supervisor) {
-		this.setState(supervisor);
+		this.setState((previousState) => ({
+			supervisors: [...previousState.supervisors, supervisor],
+		}));
 	}
 
 	render() {
@@ -31,7 +25,7 @@ class AppProvider extends Component {
 		return (
 			<AppContext.Provider
 				value={{
-					supervisor: this.state.supervisor,
+					supervisors: this.state.supervisors,
 					setSupervisor: this.setSupervisor,
 				}}
 			>
