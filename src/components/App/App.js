@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar/Navbar";
+import AppProvider from "../../context/AppProvider";
 
 export default class App extends Component {
 	render() {
 		return (
-			<main>
-				<Navbar />
-				{this.props.children}
-			</main>
+			<AppProvider>
+				<main>
+					<Navbar />
+					{this.props.children}
+				</main>
+			</AppProvider>
 		);
 	}
 }
