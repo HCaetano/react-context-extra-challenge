@@ -28,6 +28,7 @@ nav,
 section,
 button {
 	background: transparent;
+	background-color: #f7f7f7;
 	box-sizing: border-box;
 	border: 0;
 	font-family: "Barlow", sans-serif;
