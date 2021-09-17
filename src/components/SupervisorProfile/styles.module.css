@@ -19,16 +19,14 @@
 }
 
 .card-text {
+	background-color: #fff;
 	font-size: 14px;
 	line-height: 16.8px;
 	margin: 0;
 }
 
-.container {
-	background-color: #f7f7f7;
-}
-
 .content-wrapper {
+	background-color: #fff;
 	margin: 16px 0 0;
 }
 
@@ -39,6 +37,7 @@
 }
 
 .name {
+	background-color: #fff;
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 28.8px;

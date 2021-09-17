@@ -8,30 +8,48 @@
 
 .button-return {
 	background-color: #ffffff;
+	border-radius: 4px;
 	color: #1c1c21;
+	margin-right: auto;
 }
 
 .button-submit {
 	background-color: #1c1c21;
+	border-radius: 4px;
 	color: #ffffff;
 }
 
 .container {
+	background-color: #fff;
+	display: flex;
+	flex-flow: column;
 	width: 431px;
 }
 
+.container-buttons {
+	background-color: #fff;
+	display: flex;
+	margin-top: auto;
+	width: 100%;
+}
+
 .content-wrapper {
+	background-color: #fff;
 	display: flex;
 	flex-flow: column;
+	margin: 8px 0;
 }
 
 .form {
+	background-color: #fff;
 	display: flex;
-	flex-flow: row wrap;
-	padding: 0 29px;
+	flex-flow: column;
+	height: 550px;
+	padding: 0 29px 50px;
 }
 
 .input {
+	background-color: #fff;
 	border: 1px solid #d8d8d8;
 	border-radius: 4px;
 	color: #979797;
@@ -40,17 +58,22 @@
 
 .input::placeholder {
 	color: #979797;
+	font-size: 14px;
+	line-height: 17px;
 }
 
 .label {
+	background-color: #fff;
 	color: #979797;
 	font-size: 14px;
 	line-height: 17px;
+	margin-bottom: 11px;
 }
 
 .line {
 	border: 1px solid #d8d8d8;
 	left: 0;
+	margin-bottom: 24px;
 	width: 422px;
 }
 
@@ -78,6 +101,7 @@
 }
 
 .title {
+	background-color: #fff;
 	color: #1c1c21;
 	font-size: 36px;
 	font-weight: 700;
@@ -85,10 +109,62 @@
 	margin: 0 0 16px 24px;
 }
 
-.wrapper-first-name {
+.wrapper-email {
+	/* width: 70%; */
+	/* flex-grow: 3; */
+	grid-area: email;
+}
+
+.wrapper-employer {
+	flex-grow: 2;
+}
+
+.wrapper-first-name,
+.wrapper-phone {
 	flex-grow: 1;
 }
 
-.wrapper-last-name {
-	flex-grow: 2;
+.wrapper-first-name input,
+.wrapper-phone input {
+	max-width: 119px;
+}
+
+.wrapper-last-name,
+.wrapper-email {
+	flex-grow: 3;
+}
+
+.wrapper-state,
+.wrapper-postcode {
+	flex-grow: 1;
+}
+
+.wrapper-state input,
+.wrapper-postcode input {
+	max-width: 60px;
+}
+
+.wrapper-postcode {
+	margin: 8px 4px;
+}
+
+.first-line {
+	display: flex;
+	/* border: 2px solid green; */
+}
+
+.second-line {
+	display: flex;
+	/* border: 2px solid orange; */
+}
+
+.third-line {
+	display: flex;
+	/* border: 2px solid purple; */
+}
+
+.first-line,
+.second-line,
+.third-line {
+	background-color: #fff;
 }
